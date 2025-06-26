@@ -13497,6 +13497,670 @@ GG.UploadToGlobal_Key = GG.UploadToGlobal_Key or function( arg : {} )
         return;
     end;
 
+    function modules:newCopy()
+        local G2L = {};
+    
+        G2L["1"] = Instancen("ScreenGui", C);
+        G2L["1"]["IgnoreGuiInset"] = true;
+        G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
+        G2L["1"]["Name"] = "MultiKey";
+        G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+        G2L["1"]["ResetOnSpawn"] = false;
+    
+        G2L["2"] = Instancen("ImageLabel", G2L["1"]);
+        G2L["2"]["ZIndex"] = 9999;
+        G2L["2"]["BorderSizePixel"] = 0;
+        G2L["2"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["2"]["SliceScale"] = 0.08594;
+        G2L["2"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["2"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["2"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+        G2L["2"]["ImageColor3"] = fromRGB(25, 25, 28);
+        G2L["2"]["AnchorPoint"] = Vec2(0.5, 0.5);
+        G2L["2"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["2"]["BackgroundTransparency"] = 1;
+        G2L["2"]["Position"] = Dim2(0.5, 0, 0.5, 0);
+    
+        G2L["3"] = Instancen("Frame", G2L["2"]);
+        G2L["3"]["ZIndex"] = 99999;
+        G2L["3"]["BorderSizePixel"] = 0;
+        G2L["3"]["BackgroundColor3"] = fromRGB(25, 25, 28);
+        G2L["3"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+        G2L["3"]["Size"] = Dim2(0, 430, 0, 0);
+        G2L["3"]["BackgroundTransparency"] = 1;
+    
+        G2L["4"] = Instancen("UIPadding", G2L["3"]);
+    
+        G2L["5"] = Instancen("Frame", G2L["3"]);
+        G2L["5"]["BorderSizePixel"] = 0;
+        G2L["5"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["5"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["5"]["BackgroundTransparency"] = 1;
+    
+    
+        G2L["6"] = Instancen("Frame", G2L["5"]);
+        G2L["6"]["BorderSizePixel"] = 0;
+        G2L["6"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["6"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["6"]["BackgroundTransparency"] = 1;
+    
+    
+        G2L["7"] = Instancen("UIListLayout", G2L["6"]);
+        G2L["7"]["Padding"] = Dim(0, 18);
+        G2L["7"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+    
+    
+        G2L["8"] = Instancen("Frame", G2L["6"]);
+        G2L["8"]["BorderSizePixel"] = 0;
+        G2L["8"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["8"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+        G2L["8"]["Size"] = Dim2(1, 0, 0, 0);
+        G2L["8"]["BackgroundTransparency"] = 1;
+    
+    
+        G2L["9"] = Instancen("Frame", G2L["8"]);
+        G2L["9"]["BorderSizePixel"] = 0;
+        G2L["9"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["9"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+        G2L["9"]["BackgroundTransparency"] = 1;
+    
+    
+        G2L["a"] = Instancen("UIListLayout", G2L["9"]);
+        G2L["a"]["Padding"] = Dim(0, 14);
+        G2L["a"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+        G2L["a"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+        G2L["a"]["FillDirection"] = Enum.FillDirection.Horizontal;
+    
+        G2L["b"] = Instancen("Frame", G2L["9"]);
+        G2L["b"]["BorderSizePixel"] = 0;
+        G2L["b"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["b"]["Size"] = Dim2(0, 24, 0, 24);
+        G2L["b"]["LayoutOrder"] = -1;
+        G2L["b"]["BackgroundTransparency"] = 1;
+    
+        G2L["c"] = Instancen("ImageLabel", G2L["b"]);
+        G2L["c"]["BorderSizePixel"] = 0;
+        G2L["c"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["c"]["ScaleType"] = Enum.ScaleType.Crop;
+        G2L["c"]["Image"] = [[rbxassetid://77771201330939]];
+        G2L["c"]["ImageRectSize"] = Vec2(96, 96);
+        G2L["c"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["c"]["BackgroundTransparency"] = 1;
+        G2L["c"]["ImageRectOffset"] = Vec2(0, 768);
+    
+    
+        G2L["d"] = Instancen("UICorner", G2L["c"]);
+        G2L["d"]["CornerRadius"] = Dim(0, 18);
+    
+        G2L["e"] = Instancen("TextLabel", G2L["9"]);
+        G2L["e"]["BorderSizePixel"] = 0;
+        G2L["e"]["TextSize"] = 20;
+        G2L["e"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["e"]["FontFace"] = Fnew("rbxassetid://12187365364", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+        G2L["e"]["TextColor3"] = fromRGB(255, 255, 255);
+        G2L["e"]["BackgroundTransparency"] = 1;
+        G2L["e"]["RichText"] = true;
+        G2L["e"]["Text"] = [[Select Service]];
+        G2L["e"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+    
+        G2L["f"] = Instancen("Frame", G2L["6"]);
+        G2L["f"]["BorderSizePixel"] = 0;
+        G2L["f"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["f"]["Size"] = Dim2(1, 0, 0, 42);
+        G2L["f"]["BackgroundTransparency"] = 1;
+    
+        G2L["10"] = Instancen("UIListLayout", G2L["f"]);
+        G2L["10"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+        G2L["10"]["Padding"] = Dim(0, 9);
+        G2L["10"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+        G2L["10"]["FillDirection"] = Enum.FillDirection.Horizontal;
+    
+        G2L["11"] = Instancen("TextButton", G2L["f"]);
+        G2L["11"]["BorderSizePixel"] = 0;
+        G2L["11"]["TextColor3"] = fromRGB(255, 255, 255);
+        G2L["11"]["AutoButtonColor"] = false;
+        G2L["11"]["TextSize"] = 14;
+        G2L["11"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["11"]["Size"] = Dim2(0.45, 0, 1, 0);
+        G2L["11"]["BackgroundTransparency"] = 1;
+        G2L["11"]["LayoutOrder"] = 2;
+        G2L["11"]["Text"] = [[]];
+        G2L["11"]["Position"] = Dim2(-0.00377, 0, 0, 0);
+    
+        G2L["12"] = Instancen("ImageLabel", G2L["11"]);
+        G2L["12"]["BorderSizePixel"] = 0;
+        G2L["12"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["12"]["SliceScale"] = 0.03906;
+        G2L["12"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["12"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["12"]["ImageTransparency"] = 1;
+        G2L["12"]["ImageColor3"] = fromRGB(83, 83, 92);
+        G2L["12"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["12"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["12"]["BackgroundTransparency"] = 1;
+        G2L["12"]["Name"] = [[Squircle]];
+    
+        G2L["13"] = Instancen("ImageLabel", G2L["11"]);
+        G2L["13"]["BorderSizePixel"] = 0;
+        G2L["13"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["13"]["SliceScale"] = 0.03906;
+        G2L["13"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["13"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["13"]["ImageTransparency"] = 0.95;
+        G2L["13"]["Image"] = "rbxassetid://80999662900595";
+        G2L["13"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["13"]["BackgroundTransparency"] = 1;
+        G2L["13"]["Name"] = "Special";
+    
+        G2L["14"] = Instancen("ImageLabel", G2L["11"]);
+        G2L["14"]["BorderSizePixel"] = 0;
+        G2L["14"]["SliceCenter"] = Rectn(512, 512, 512, 512);
+        G2L["14"]["SliceScale"] = 0.01953;
+        G2L["14"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["14"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["14"]["ImageColor3"] = fromRGB(0, 0, 0);
+        G2L["14"]["AnchorPoint"] = Vec2(0.5, 0.5);
+        G2L["14"]["Image"] = "rbxassetid://84825982946844";
+        G2L["14"]["Size"] = Dim2(1, 3, 1, 3);
+        G2L["14"]["BackgroundTransparency"] = 1;
+        G2L["14"]["Name"] = "Shadow";
+        G2L["14"]["Position"] = Dim2(0.5, 0, 0.5, 0);
+    
+    
+    
+        G2L["15"] = Instancen("ImageLabel", G2L["11"]);
+        G2L["15"]["BorderSizePixel"] = 0;
+        G2L["15"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["15"]["SliceScale"] = 0.03906;
+        G2L["15"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["15"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["15"]["ImageTransparency"] = 0.85;
+        G2L["15"]["Image"] = [[rbxassetid://117788349049947]];
+        G2L["15"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["15"]["BackgroundTransparency"] = 1;
+    
+        G2L["16"] = Instancen("ImageLabel", G2L["11"]);
+        G2L["16"]["BorderSizePixel"] = 0;
+        G2L["16"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["16"]["SliceScale"] = 0.03906;
+        G2L["16"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["16"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["16"]["ImageTransparency"] = 1;
+        G2L["16"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["16"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["16"]["BackgroundTransparency"] = 1;
+        G2L["16"]["Name"] = [[Frame]];
+    
+        G2L["17"] = Instancen("UIPadding", G2L["16"]);
+        G2L["17"]["PaddingRight"] = Dim(0, 12);
+        G2L["17"]["PaddingLeft"] = Dim(0, 12);
+    
+        G2L["18"] = Instancen("UIListLayout", G2L["16"]);
+        G2L["18"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+        G2L["18"]["Padding"] = Dim(0, 8);
+        G2L["18"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+        G2L["18"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+        G2L["18"]["FillDirection"] = Enum.FillDirection.Horizontal;
+    
+    
+        G2L["19"] = Instancen("TextLabel", G2L["16"]);
+        G2L["19"]["BorderSizePixel"] = 0;
+        G2L["19"]["TextSize"] = 18;
+        G2L["19"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["19"]["FontFace"] = Fnew([[rbxassetid://12187365364]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+        G2L["19"]["TextColor3"] = fromRGB(255, 255, 255);
+        G2L["19"]["BackgroundTransparency"] = 1;
+        G2L["19"]["RichText"] = true;
+        G2L["19"]["Text"] = [[Linkvertise]];
+        G2L["19"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+    
+        G2L["1a"] = Instancen("TextButton", G2L["f"]);
+        G2L["1a"]["BorderSizePixel"] = 0;
+        G2L["1a"]["TextColor3"] = fromRGB(255, 255, 255);
+        G2L["1a"]["AutoButtonColor"] = false;
+        G2L["1a"]["TextSize"] = 14;
+        G2L["1a"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["1a"]["Size"] = Dim2(0.45, 0, 1, 0);
+        G2L["1a"]["BackgroundTransparency"] = 1;
+        G2L["1a"]["LayoutOrder"] = 2;
+        G2L["1a"]["Text"] = [[]];
+        G2L["1a"]["Position"] = Dim2(-0.00377, 0, 0, 0);
+    
+        G2L["1b"] = Instancen("ImageLabel", G2L["1a"]);
+        G2L["1b"]["BorderSizePixel"] = 0;
+        G2L["1b"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["1b"]["SliceScale"] = 0.03906;
+        G2L["1b"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["1b"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["1b"]["ImageTransparency"] = 1;
+        G2L["1b"]["ImageColor3"] = fromRGB(83, 83, 92);
+        G2L["1b"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["1b"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["1b"]["BackgroundTransparency"] = 1;
+        G2L["1b"]["Name"] = [[Squircle]];
+    
+        G2L["1c"] = Instancen("ImageLabel", G2L["1a"]);
+        G2L["1c"]["BorderSizePixel"] = 0;
+        G2L["1c"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["1c"]["SliceScale"] = 0.03906;
+        G2L["1c"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["1c"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["1c"]["ImageTransparency"] = 0.95;
+        G2L["1c"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["1c"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["1c"]["BackgroundTransparency"] = 1;
+        G2L["1c"]["Name"] = [[Special]];
+    
+        G2L["1d"] = Instancen("ImageLabel", G2L["1a"]);
+        G2L["1d"]["BorderSizePixel"] = 0;
+        G2L["1d"]["SliceCenter"] = Rectn(512, 512, 512, 512);
+        G2L["1d"]["SliceScale"] = 0.01953;
+        G2L["1d"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["1d"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["1d"]["ImageColor3"] = fromRGB(0, 0, 0);
+        G2L["1d"]["AnchorPoint"] = Vec2(0.5, 0.5);
+        G2L["1d"]["Image"] = [[rbxassetid://84825982946844]];
+        G2L["1d"]["Size"] = Dim2(1, 3, 1, 3);
+        G2L["1d"]["BackgroundTransparency"] = 1;
+        G2L["1d"]["Name"] = [[Shadow]];
+        G2L["1d"]["Position"] = Dim2(0.5, 0, 0.5, 0);
+    
+        G2L["1e"] = Instancen("ImageLabel", G2L["1a"]);
+        G2L["1e"]["BorderSizePixel"] = 0;
+        G2L["1e"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["1e"]["SliceScale"] = 0.03906;
+        G2L["1e"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["1e"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["1e"]["ImageTransparency"] = 0.85;
+        G2L["1e"]["Image"] = [[rbxassetid://117788349049947]];
+        G2L["1e"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["1e"]["BackgroundTransparency"] = 1;
+    
+        G2L["1f"] = Instancen("ImageLabel", G2L["1a"]);
+        G2L["1f"]["BorderSizePixel"] = 0;
+        G2L["1f"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["1f"]["SliceScale"] = 0.03906;
+        G2L["1f"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["1f"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["1f"]["ImageTransparency"] = 1;
+        G2L["1f"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["1f"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["1f"]["BackgroundTransparency"] = 1;
+        G2L["1f"]["Name"] = [[Frame]];
+    
+        G2L["20"] = Instancen("UIPadding", G2L["1f"]);
+        G2L["20"]["PaddingRight"] = Dim(0, 12);
+        G2L["20"]["PaddingLeft"] = Dim(0, 12);
+    
+        G2L["21"] = Instancen("UIListLayout", G2L["1f"]);
+        G2L["21"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+        G2L["21"]["Padding"] = Dim(0, 8);
+        G2L["21"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+        G2L["21"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+        G2L["21"]["FillDirection"] = Enum.FillDirection.Horizontal;
+    
+        G2L["22"] = Instancen("TextLabel", G2L["1f"]);
+        G2L["22"]["BorderSizePixel"] = 0;
+        G2L["22"]["TextSize"] = 18;
+        G2L["22"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["22"]["FontFace"] = Fnew([[rbxassetid://12187365364]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+        G2L["22"]["TextColor3"] = fromRGB(255, 255, 255);
+        G2L["22"]["BackgroundTransparency"] = 1;
+        G2L["22"]["RichText"] = true;
+        G2L["22"]["Text"] = "Lootlab - Soon";
+        G2L["22"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+    
+        G2L["23"] = Instancen("UIPadding", G2L["6"]);
+        G2L["23"]["PaddingTop"] = Dim(0, 16);
+        G2L["23"]["PaddingRight"] = Dim(0, 16);
+        G2L["23"]["PaddingLeft"] = Dim(0, 16);
+        G2L["23"]["PaddingBottom"] = Dim(0, 16);
+    
+        G2L["24"] = Instancen("Frame", G2L["6"]);
+        G2L["24"]["BorderSizePixel"] = 0;
+        G2L["24"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["24"]["Size"] = Dim2(1, 0, 0, 42);
+        G2L["24"]["LayoutOrder"] = 100;
+        G2L["24"]["BackgroundTransparency"] = 1;
+    
+        G2L["25"] = Instancen("UIListLayout", G2L["24"]);
+        G2L["25"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Right;
+        G2L["25"]["Padding"] = Dim(0, 9);
+        G2L["25"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+        G2L["25"]["FillDirection"] = Enum.FillDirection.Horizontal;
+    
+        G2L["26"] = Instancen("TextButton", G2L["24"]);
+        G2L["26"]["BorderSizePixel"] = 0;
+        G2L["26"]["TextColor3"] = fromRGB(255, 255, 255);
+        G2L["26"]["AutoButtonColor"] = false;
+        G2L["26"]["TextSize"] = 14;
+        G2L["26"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["26"]["AutomaticSize"] = Enum.AutomaticSize.X;
+        G2L["26"]["Size"] = Dim2(0, 0, 1, 0);
+        G2L["26"]["BackgroundTransparency"] = 1;
+        G2L["26"]["LayoutOrder"] = 2;
+        G2L["26"]["Text"] = [[]];
+    
+        G2L["27"] = Instancen("ImageLabel", G2L["26"]);
+        G2L["27"]["BorderSizePixel"] = 0;
+        G2L["27"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["27"]["SliceScale"] = 0.03906;
+        G2L["27"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["27"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["27"]["ImageTransparency"] = 1;
+        G2L["27"]["ImageColor3"] = fromRGB(83, 83, 92);
+        G2L["27"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["27"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["27"]["BackgroundTransparency"] = 1;
+        G2L["27"]["Name"] = [[Squircle]];
+    
+        G2L["28"] = Instancen("ImageLabel", G2L["26"]);
+        G2L["28"]["BorderSizePixel"] = 0;
+        G2L["28"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["28"]["SliceScale"] = 0.03906;
+        G2L["28"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["28"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["28"]["ImageTransparency"] = 0.95;
+        G2L["28"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["28"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["28"]["BackgroundTransparency"] = 1;
+        G2L["28"]["Name"] = [[Special]];
+    
+        G2L["29"] = Instancen("ImageLabel", G2L["26"]);
+        G2L["29"]["BorderSizePixel"] = 0;
+        G2L["29"]["SliceCenter"] = Rectn(512, 512, 512, 512);
+        G2L["29"]["SliceScale"] = 0.01953;
+        G2L["29"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["29"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["29"]["ImageColor3"] = fromRGB(0, 0, 0);
+        G2L["29"]["AnchorPoint"] = Vec2(0.5, 0.5);
+        G2L["29"]["Image"] = [[rbxassetid://84825982946844]];
+        G2L["29"]["Size"] = Dim2(1, 3, 1, 3);
+        G2L["29"]["BackgroundTransparency"] = 1;
+        G2L["29"]["Name"] = [[Shadow]];
+        G2L["29"]["Position"] = Dim2(0.5, 0, 0.5, 0);
+    
+        G2L["2a"] = Instancen("ImageLabel", G2L["26"]);
+        G2L["2a"]["BorderSizePixel"] = 0;
+        G2L["2a"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["2a"]["SliceScale"] = 0.03906;
+        G2L["2a"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["2a"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["2a"]["ImageTransparency"] = 0.85;
+        G2L["2a"]["Image"] = [[rbxassetid://117788349049947]];
+        G2L["2a"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["2a"]["BackgroundTransparency"] = 1;
+    
+        G2L["2b"] = Instancen("ImageLabel", G2L["26"]);
+        G2L["2b"]["BorderSizePixel"] = 0;
+        G2L["2b"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["2b"]["SliceScale"] = 0.03906;
+        G2L["2b"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["2b"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["2b"]["ImageTransparency"] = 1;
+        G2L["2b"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["2b"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["2b"]["BackgroundTransparency"] = 1;
+        G2L["2b"]["Name"] = [[Frame]];
+    
+        G2L["2c"] = Instancen("UIPadding", G2L["2b"]);
+        G2L["2c"]["PaddingRight"] = Dim(0, 12);
+        G2L["2c"]["PaddingLeft"] = Dim(0, 12);
+    
+        G2L["2d"] = Instancen("UIListLayout", G2L["2b"]);
+        G2L["2d"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+        G2L["2d"]["Padding"] = Dim(0, 8);
+        G2L["2d"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+        G2L["2d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+        G2L["2d"]["FillDirection"] = Enum.FillDirection.Horizontal;
+    
+        G2L["2e"] = Instancen("TextLabel", G2L["2b"]);
+        G2L["2e"]["BorderSizePixel"] = 0;
+        G2L["2e"]["TextSize"] = 18;
+        G2L["2e"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["2e"]["FontFace"] = Fnew([[rbxassetid://12187365364]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+        G2L["2e"]["TextColor3"] = fromRGB(255, 255, 255);
+        G2L["2e"]["BackgroundTransparency"] = 1;
+        G2L["2e"]["RichText"] = true;
+        G2L["2e"]["Text"] = [[Cancel]];
+        G2L["2e"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+    
+        G2L["2f"] = Instancen("Frame", G2L["6"]);
+        G2L["2f"]["BorderSizePixel"] = 0;
+        G2L["2f"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["2f"]["Size"] = Dim2(1, 0, 0, 42);
+        G2L["2f"]["BackgroundTransparency"] = 1;
+    
+        G2L["30"] = Instancen("UIListLayout", G2L["2f"]);
+        G2L["30"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+        G2L["30"]["Padding"] = Dim(0, 9);
+        G2L["30"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+        G2L["30"]["FillDirection"] = Enum.FillDirection.Horizontal;
+    
+        G2L["31"] = Instancen("TextButton", G2L["2f"]);
+        G2L["31"]["BorderSizePixel"] = 0;
+        G2L["31"]["TextColor3"] = fromRGB(255, 255, 255);
+        G2L["31"]["AutoButtonColor"] = false;
+        G2L["31"]["TextSize"] = 14;
+        G2L["31"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["31"]["Size"] = Dim2(0.45, 0, 1, 0);
+        G2L["31"]["BackgroundTransparency"] = 1;
+        G2L["31"]["LayoutOrder"] = 2;
+        G2L["31"]["Text"] = [[]];
+        G2L["31"]["Position"] = Dim2(-0.00377, 0, 0, 0);
+    
+        G2L["32"] = Instancen("ImageLabel", G2L["31"]);
+        G2L["32"]["BorderSizePixel"] = 0;
+        G2L["32"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["32"]["SliceScale"] = 0.03906;
+        G2L["32"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["32"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["32"]["ImageTransparency"] = 1;
+        G2L["32"]["ImageColor3"] = fromRGB(83, 83, 92);
+        G2L["32"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["32"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["32"]["BackgroundTransparency"] = 1;
+        G2L["32"]["Name"] = [[Squircle]];
+    
+        G2L["33"] = Instancen("ImageLabel", G2L["31"]);
+        G2L["33"]["BorderSizePixel"] = 0;
+        G2L["33"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["33"]["SliceScale"] = 0.03906;
+        G2L["33"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["33"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["33"]["ImageTransparency"] = 0.95;
+        G2L["33"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["33"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["33"]["BackgroundTransparency"] = 1;
+        G2L["33"]["Name"] = [[Special]];
+    
+        G2L["34"] = Instancen("ImageLabel", G2L["31"]);
+        G2L["34"]["BorderSizePixel"] = 0;
+        G2L["34"]["SliceCenter"] = Rectn(512, 512, 512, 512);
+        G2L["34"]["SliceScale"] = 0.01953;
+        G2L["34"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["34"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["34"]["ImageColor3"] = fromRGB(0, 0, 0);
+        G2L["34"]["AnchorPoint"] = Vec2(0.5, 0.5);
+        G2L["34"]["Image"] = [[rbxassetid://84825982946844]];
+        G2L["34"]["Size"] = Dim2(1, 3, 1, 3);
+        G2L["34"]["BackgroundTransparency"] = 1;
+        G2L["34"]["Name"] = [[Shadow]];
+        G2L["34"]["Position"] = Dim2(0.5, 0, 0.5, 0);
+    
+        G2L["35"] = Instancen("ImageLabel", G2L["31"]);
+        G2L["35"]["BorderSizePixel"] = 0;
+        G2L["35"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["35"]["SliceScale"] = 0.03906;
+        G2L["35"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["35"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["35"]["ImageTransparency"] = 0.85;
+        G2L["35"]["Image"] = [[rbxassetid://117788349049947]];
+        G2L["35"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["35"]["BackgroundTransparency"] = 1;
+    
+        G2L["36"] = Instancen("ImageLabel", G2L["31"]);
+        G2L["36"]["BorderSizePixel"] = 0;
+        G2L["36"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["36"]["SliceScale"] = 0.03906;
+        G2L["36"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["36"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["36"]["ImageTransparency"] = 1;
+        G2L["36"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["36"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["36"]["BackgroundTransparency"] = 1;
+        G2L["36"]["Name"] = [[Frame]];
+    
+        G2L["37"] = Instancen("UIPadding", G2L["36"]);
+        G2L["37"]["PaddingRight"] = Dim(0, 12);
+        G2L["37"]["PaddingLeft"] = Dim(0, 12);
+    
+        G2L["38"] = Instancen("UIListLayout", G2L["36"]);
+        G2L["38"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+        G2L["38"]["Padding"] = Dim(0, 8);
+        G2L["38"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+        G2L["38"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+        G2L["38"]["FillDirection"] = Enum.FillDirection.Horizontal;
+    
+        G2L["39"] = Instancen("TextLabel", G2L["36"]);
+        G2L["39"]["BorderSizePixel"] = 0;
+        G2L["39"]["TextSize"] = 18;
+        G2L["39"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["39"]["FontFace"] = Fnew([[rbxassetid://12187365364]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+        G2L["39"]["TextColor3"] = fromRGB(255, 255, 255);
+        G2L["39"]["BackgroundTransparency"] = 1;
+        G2L["39"]["RichText"] = true;
+        G2L["39"]["Text"] = "Rinku - Soon";
+        G2L["39"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+    
+        G2L["3a"] = Instancen("TextButton", G2L["2f"]);
+        G2L["3a"]["BorderSizePixel"] = 0;
+        G2L["3a"]["TextColor3"] = fromRGB(255, 255, 255);
+        G2L["3a"]["AutoButtonColor"] = false;
+        G2L["3a"]["TextSize"] = 14;
+        G2L["3a"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["3a"]["Size"] = Dim2(0.45, 0, 1, 0);
+        G2L["3a"]["BackgroundTransparency"] = 1;
+        G2L["3a"]["LayoutOrder"] = 2;
+        G2L["3a"]["Text"] = [[]];
+        G2L["3a"]["Position"] = Dim2(-0.00377, 0, 0, 0);
+    
+        G2L["3b"] = Instancen("ImageLabel", G2L["3a"]);
+        G2L["3b"]["BorderSizePixel"] = 0;
+        G2L["3b"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["3b"]["SliceScale"] = 0.03906;
+        G2L["3b"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["3b"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["3b"]["ImageTransparency"] = 1;
+        G2L["3b"]["ImageColor3"] = fromRGB(83, 83, 92);
+        G2L["3b"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["3b"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["3b"]["BackgroundTransparency"] = 1;
+        G2L["3b"]["Name"] = [[Squircle]];
+    
+        G2L["3c"] = Instancen("ImageLabel", G2L["3a"]);
+        G2L["3c"]["BorderSizePixel"] = 0;
+        G2L["3c"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["3c"]["SliceScale"] = 0.03906;
+        G2L["3c"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["3c"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["3c"]["ImageTransparency"] = 0.95;
+        G2L["3c"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["3c"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["3c"]["BackgroundTransparency"] = 1;
+        G2L["3c"]["Name"] = [[Special]];
+    
+        G2L["3d"] = Instancen("ImageLabel", G2L["3a"]);
+        G2L["3d"]["BorderSizePixel"] = 0;
+        G2L["3d"]["SliceCenter"] = Rectn(512, 512, 512, 512);
+        G2L["3d"]["SliceScale"] = 0.01953;
+        G2L["3d"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["3d"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["3d"]["ImageColor3"] = fromRGB(0, 0, 0);
+        G2L["3d"]["AnchorPoint"] = Vec2(0.5, 0.5);
+        G2L["3d"]["Image"] = [[rbxassetid://84825982946844]];
+        G2L["3d"]["Size"] = Dim2(1, 3, 1, 3);
+        G2L["3d"]["BackgroundTransparency"] = 1;
+        G2L["3d"]["Name"] = [[Shadow]];
+        G2L["3d"]["Position"] = Dim2(0.5, 0, 0.5, 0);
+    
+        G2L["3e"] = Instancen("ImageLabel", G2L["3a"]);
+        G2L["3e"]["BorderSizePixel"] = 0;
+        G2L["3e"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["3e"]["SliceScale"] = 0.03906;
+        G2L["3e"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["3e"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["3e"]["ImageTransparency"] = 0.85;
+        G2L["3e"]["Image"] = [[rbxassetid://117788349049947]];
+        G2L["3e"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["3e"]["BackgroundTransparency"] = 1;
+    
+        G2L["3f"] = Instancen("ImageLabel", G2L["3a"]);
+        G2L["3f"]["BorderSizePixel"] = 0;
+        G2L["3f"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["3f"]["SliceScale"] = 0.03906;
+        G2L["3f"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["3f"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["3f"]["ImageTransparency"] = 1;
+        G2L["3f"]["Image"] = [[rbxassetid://80999662900595]];
+        G2L["3f"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["3f"]["BackgroundTransparency"] = 1;
+        G2L["3f"]["Name"] = [[Frame]];
+    
+        G2L["40"] = Instancen("UIPadding", G2L["3f"]);
+        G2L["40"]["PaddingRight"] = Dim(0, 12);
+        G2L["40"]["PaddingLeft"] = Dim(0, 12);
+    
+        G2L["41"] = Instancen("UIListLayout", G2L["3f"]);
+        G2L["41"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+        G2L["41"]["Padding"] = Dim(0, 8);
+        G2L["41"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+        G2L["41"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+        G2L["41"]["FillDirection"] = Enum.FillDirection.Horizontal;
+    
+        G2L["42"] = Instancen("TextLabel", G2L["3f"]);
+        G2L["42"]["BorderSizePixel"] = 0;
+        G2L["42"]["TextSize"] = 18;
+        G2L["42"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["42"]["FontFace"] = Fnew([[rbxassetid://12187365364]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+        G2L["42"]["TextColor3"] = fromRGB(255, 255, 255);
+        G2L["42"]["BackgroundTransparency"] = 1;
+        G2L["42"]["RichText"] = true;
+        G2L["42"]["Text"] = "Workink - Soon";
+        G2L["42"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+    
+        G2L["43"] = Instancen("UIScale", G2L["2"]);
+    
+        G2L["44"] = Instancen("ImageLabel", G2L["2"]);
+        G2L["44"]["BorderSizePixel"] = 0;
+        G2L["44"]["SliceCenter"] = Rectn(256, 256, 256, 256);
+        G2L["44"]["SliceScale"] = 0.08594;
+        G2L["44"]["BackgroundColor3"] = fromRGB(255, 255, 255);
+        G2L["44"]["ScaleType"] = Enum.ScaleType.Slice;
+        G2L["44"]["ImageTransparency"] = 0.9;
+        G2L["44"]["Image"] = [[rbxassetid://117788349049947]];
+        G2L["44"]["Size"] = Dim2(1, 0, 1, 0);
+        G2L["44"]["BackgroundTransparency"] = 1;
+    
+        G2L["45"] = Instancen("UIGradient", G2L["44"]);
+        G2L["45"]["Rotation"] = 90;
+        G2L["45"]["Transparency"] = NSnew{NSKnew(0.000, 0),NSKnew(1.000, 1)};
+    
+        G2L["26"].Activated:Connect(function()
+            G2L["1"]:Destroy();
+            G2L["1"] = nil;
+            G2L = nil;
+        end);
+        G2L["11"].Activated:Connect(function()
+            G2L["1"]:Destroy();
+            G2L["1"] = nil;
+            G2L = nil;
+            return setc("https://ads.luarmor.net/get_key?for=TTJYs-zIbxJzkShQpA");
+        end);
+    
+        return G2L;
+    end;
+
     function modules:new( arg )
         local G2L = {};
         local tbl = {};
@@ -14173,8 +14837,8 @@ GG.UploadToGlobal_Key = GG.UploadToGlobal_Key or function( arg : {} )
     return modules;
 end;
 
-if not ScriptCache.error_handler then
-    ScriptCache.error_handler = function(...)
+if not GG.error_handler then
+    GG.error_handler = function(...)
         return warn("[Flow] : Error : " .. ...);
     end;
 end;
