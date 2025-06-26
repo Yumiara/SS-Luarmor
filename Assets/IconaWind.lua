@@ -5950,6 +5950,7 @@ do
                         ImageTransparency = 0.35
                     }):Play();
                     ac.AddSignal(ad.Changed, function()
+                        if not r or not r.ImageLabel or not r.ImageLabel.Parent then return; end;
                         if ad.UserInputState == Enum.UserInputState.End then
                             isResizing = false;
                             r.Active = false;
