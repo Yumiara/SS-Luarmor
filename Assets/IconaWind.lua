@@ -5632,6 +5632,9 @@ do
                         ac.SafeCallback(o.OnCloseCallback);
                     end);
                 end;
+                if not o or not o.UIElements or not o.UIElements.Main or not o.UIElements.Main.Parent then
+                    return;
+                end;
                 o.UIElements.Main.Main.Visible = false;
                 o.CanDropdown = false;
                 o.Closed = true;
