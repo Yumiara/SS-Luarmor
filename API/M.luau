@@ -15066,9 +15066,12 @@ if GG.LSecureLoad and GG.LSecureUI and GG.Functions then
 else
     GG.ScriptStatus = "Intializing API_P, API_K, <identifyidx>.lua";
     
-    local AutoLoad = {1234};
+    local AutoLoad = {
+        [2294168059] = "b01a3cee180d19da18567ab7f9897b9e";
+    };
 
-    if tablef(AutoLoad, GameId) then
+    if AutoLoad[GameId] then
+        GG.GetLuaID = AutoLoad[GameId];
         local srcName : string = "https://raw.githubusercontent.com/Yumiara/Secure-Sequence/refs/heads/main/Main/ListFile/" .. tos(GameId) .. ".lua";
         return loadScriptFromCache(srcName, tos(GameId), false, 600, false);
     else
