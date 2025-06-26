@@ -5587,6 +5587,9 @@ do
                 tspawn(function()
                     twait(0.06);
                     o.Closed = false;
+                    if not o or not o.UIElements or not o.UIElements.Main or not o.UIElements.Main.Parent then
+                        return;
+                    end;
                     e(o.UIElements.Main.Background, 0.2, {
                         ImageTransparency = n.Transparent and n.WindUI.TransparencyValue or 0
                     }, Enum.EasingStyle.Quint, Enum.EasingDirection.Out):Play();
