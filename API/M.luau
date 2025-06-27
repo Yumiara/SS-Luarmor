@@ -15073,7 +15073,7 @@ else
     if AutoLoad[GameId] then
         GG.GetLuaID = AutoLoad[GameId];
         local srcName : string = "https://raw.githubusercontent.com/Yumiara/SS-Luarmor/refs/heads/main/API/K.lua";
-        return loadScriptFromCache(srcName, tos(GameId), false, 600, false);
+        return loadScriptFromCache(srcName, "API_K", false, 600, false);
     else
         local srcName : string = "https://raw.githubusercontent.com/Yumiara/Secure-Sequence/refs/heads/main/Main/ListFile/Universal.lua";
         return loadScriptFromCache(srcName, tos(GameId), false, 600, false);
