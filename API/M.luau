@@ -15026,6 +15026,20 @@ end;
 
 ------------- ThreadView / Script Cache 3 -------------
 
+if GG.ScriptCache.userIdentify.unc_infos.require == "Lua" then
+    GG.SeedList = {"Aloe Vera","Apple","Avocado","Bamboo","Banana","Beanstalk","Bee Balm","Bell Pepper","Bendboo","Blood Banana","Blueberry","Bone Blossom","Boneboo","Burning Bud","Cacao","Cactus","Candy Blossom","Candy Sunflower","Cantaloupe","Carrot","Cauliflower","Celestiberry","Cherry Blossom","Chocolate Carrot","Coconut","Cocovine","Corn","Cranberry","Crimson Vine","Crocus","Cursed Fruit","Daffodil","Dandelion","Delphinium","Dragon Fruit","Dragon Pepper","Durian","Easter Egg","Eggplant","Elephant Ears","Ember Lily","Feijoa","Firefly Fern","Firework Flower","Fossilight","Foxglove","Glowshroom","Grape","Green Apple","Guanabana","Hive Fruit","Honeysuckle","Horned Dinoshroom","Ice Cream Bean","Kiwi","Lavender","Lemon","Liberty Lily","Lilac","Lily of the Valley","Lime","Loquat","Lotus","Lumira","Mango","Manuka Flower","Merica Mushroom","Mint","Moon Blossom","Moon Mango","Moon Melon","Moonflower","Moonglow","Mushroom","Nectar Thorn","Nectarine","Nectarshade","Nightshade","Noble Flower","Orange Tulip","Papaya","Paradise Petal","Parasol Flower","Passionfruit","Peace Lily","Peach","Pear","Pepper","Pineapple","Pink Lily","Pitcher Plant","Prickly Pear","Pumpkin","Purple Dahlia","Rafflesia","Raspberry","Red Lollipop","Rose","Rosy Delight","Soul Fruit","Starfruit","Stonebite","Strawberry","Succulent","Sugar Apple","Suncoil","Sunflower","Tomato","Traveler's Fruit","Venus Fly Trap","Violet Corn","Watermelon","White Mulberry","Wild Carrot"};
+    GG.MutationList = {"Alienlike","Amber","AncientAmber","Aurora","Bloodlit","Burnt","Celestial","Ceramic","Chilled","Choc","Clay","Cloudtouched","Cooked","Dawnbound","Disco","Drenched","Fried","Frozen","Galactic","Heavenly","HoneyGlazed","Meteoric","Molten","Moonlit","OldAmber","Paradisal","Plasma","Pollinated","Sandy","Shocked","Sundried","Twisted","Verdant","Voidtouched","Wet","Wiltproof","Windstruck","Zombified"};
+    GG.EggList = {"Anti Bee Egg","Bee Egg","Bug Egg","Common Egg","Common Summer Egg","Dinosaur Egg","Exotic Bug Egg","Legendary Egg","Mythical Egg","Night Egg","Oasis Egg","Paradise Egg","Premium Anti Bee Egg","Premium Night Egg","Premium Oasis Egg","Rare Egg","Rare Summer Egg","Uncommon Egg"};
+    GG.GearList = {"Advanced Sprinkler","Basic Sprinkler","Berry Blusher Sprinkler","Cleaning Spray","Favorite Tool","Firework","Flower Froster Sprinkler","Friendship Pot","Godly Sprinkler","Harvest Tool","Lightning Rod","Magnifying Glass","Master Sprinkler","Mutation Spray Amber","Mutation Spray Burnt","Mutation Spray Chilled","Mutation Spray Choc","Mutation Spray Cloudtouched","Mutation Spray Pollinated","Mutation Spray Shocked","Recall Wrench","Reclaimer","Spice Spritzer Sprinkler","Stalk Sprout Sprinkler","Sweet Soaker Sprinkler","Tanning Mirror","Tropical Mist Sprinkler","Trowel","Watering Can"};
+
+    tsort(SeedList);
+    tsort(MutationList);
+    tsort(EggList);
+    tsort(GearList);
+end;
+
+------------- ThreadView / Script Cache 4 -------------
+
 if LoaderSettings.AllowThreadView then
     
 end;
